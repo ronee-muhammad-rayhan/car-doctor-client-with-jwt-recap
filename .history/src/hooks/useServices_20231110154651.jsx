@@ -13,7 +13,7 @@ const useServices = (asc, min, max, search) => {
         asc ? "asc" : "desc"
       }&min=${min}&max=${max}&search=${search}`
     ).then((res) => setServices(res.data));
-  }, [asc, min, max, search]);
+  }, [asc, min, max]);
 
   return services;
 };

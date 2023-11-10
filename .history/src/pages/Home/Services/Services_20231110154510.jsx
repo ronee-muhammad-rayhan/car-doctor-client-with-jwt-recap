@@ -9,8 +9,8 @@ const Services = () => {
   const [min, setMin] = useState(30);
   const [max, setMax] = useState(70);
   //   const [max, setMax] = useState(undefined);
+  const services = useServices(asc, min, max);
   const [search, setSearch] = useState("");
-  const services = useServices(asc, min, max, search);
   // const [services, setServices] = useState([]);
 
   // useEffect(() => {

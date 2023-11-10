@@ -9,11 +9,9 @@ const useServices = (asc, min, max, search) => {
     //     .then(res => res.json())
     //     .then(data => setServices(data))
     axiosSecure(
-      `/services?sort=${
-        asc ? "asc" : "desc"
-      }&min=${min}&max=${max}&search=${search}`
+      `/services?sort=${asc ? "asc" : "desc"}&min=${min}&max=${max}`
     ).then((res) => setServices(res.data));
-  }, [asc, min, max, search]);
+  }, [asc, min, max]);
 
   return services;
 };

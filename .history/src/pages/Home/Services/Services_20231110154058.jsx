@@ -9,20 +9,14 @@ const Services = () => {
   const [min, setMin] = useState(30);
   const [max, setMax] = useState(70);
   //   const [max, setMax] = useState(undefined);
-  const [search, setSearch] = useState("");
-  const services = useServices(asc, min, max, search);
+  const services = useServices(asc, min, max);
   // const [services, setServices] = useState([]);
 
   // useEffect(() => {
-  //     fetch(`https://car-doctor-server-topaz-one.vercel.app/services?sort=${asc?'asc':'desc'}&search=${search}`)
+  //     fetch(`https://car-doctor-server-topaz-one.vercel.app/services?sort=${asc?'asc':'desc'}`)
   //         .then(res => res.json())
   //         .then(data => setServices(data));
   // }, [])
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const searchText = e.target.search.value;
-    setSearch(searchText);
-  };
 
   return (
     <div className="mt-4">
@@ -34,7 +28,7 @@ const Services = () => {
           humour, or randomised <br /> words which do not look even slightly
           believable.{" "}
         </p>
-        <form onSubmit={handleSearch}>
+        <form>
           <input type="text" name="search" id="" />
           <input type="submit" value="Search" className="btn btn-primary" />
         </form>
