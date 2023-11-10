@@ -8,7 +8,6 @@ const Services = () => {
   const [asc, setAsc] = useState(true);
   const [min, setMin] = useState(30);
   const [max, setMax] = useState(70);
-  //   const [max, setMax] = useState(undefined);
   const services = useServices(asc, min, max);
   // const [services, setServices] = useState([]);
 

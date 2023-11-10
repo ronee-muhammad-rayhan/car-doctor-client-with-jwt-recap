@@ -11,7 +11,7 @@ const useServices = (asc, min, max) => {
     axiosSecure(
       `/services?sort=${asc ? "asc" : "desc"}&min=${min}&max=${max}`
     ).then((res) => setServices(res.data));
-  }, [asc, min, max]);
+  }, [asc]);
 
   return services;
 };
